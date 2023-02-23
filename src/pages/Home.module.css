@@ -1,0 +1,9 @@
+
+.main1{
+    background-image:url( "https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?size=626&ext=jpg&ga=GA1.2.1011732404.1676991472&semt=ais");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:100vw 81vh;
+    display:grid;
+    grid-template-rows:auto ;
+    gap:21px;
+}
