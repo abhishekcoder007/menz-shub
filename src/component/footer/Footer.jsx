@@ -52,7 +52,7 @@ export default function Footer(){
 </div>
 
          </div>
-         <button className={style.backtop}>Back to Top</button>
+         {/* <button className={style.backtop}>back to top</button> */}
         </>
     )
 }

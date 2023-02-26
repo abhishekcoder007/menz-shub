@@ -1,0 +1,74 @@
+.card{
+    display: flex;
+    flex-direction: column;
+   
+    justify-content:center;
+    align-items: center;
+}
+
+.signincard{
+     box-shadow: 0 11px 21px 0 rgba(239, 12, 12, 0.5);
+    display: flex;
+    width:fit-content;
+    flex-direction: column;
+    margin-top:25vh;
+    justify-content:center;
+    align-items: center;
+    padding: 51px;
+    /* border: 2px solid rgb(238, 215, 6); */
+
+}
+.heading{
+
+    font-size: xx-large;
+    /* background-color:rgba(245, 245, 244, 0.1); */
+    box-shadow: 0 11px 11px 0 rgba(200, 216, 53, 0.5);
+    /* border: 2px solid black; */
+    font-weight: 500;
+    color: rgb(14, 15, 16);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.inputbox{
+
+    display:flex;
+    margin-bottom:15px;
+    align-items: center;
+    font-size: medium;
+    font-weight: 400;
+
+}
+.signincard .inputbox input{
+
+    width: 25vw;
+    height: 05vh;
+    border-radius: 1px;
+    outline-color:rgba(239, 12, 12, 0.5) ;
+    outline-style: inset;
+    outline-width: 2px;
+
+}
+.btn{
+    margin-left: 11rem;
+}
+
+.submitbtn{
+      font-size: x-large;
+     background-color: aliceblue;
+     color:black;
+    margin-left: 3.5rem;
+    border-radius: 5px;
+    width:81%;
+    height:2rem;
+}
+.submitbtn1{
+    background-color: aliceblue;
+    color:black;
+   margin-left: 23rem;
+   border-radius: 5px;
+   width:5rem;
+   height:2rem;
+}
+.signuplink{
+    text-decoration: none;
+}

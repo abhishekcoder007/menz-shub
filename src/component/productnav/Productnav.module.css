@@ -70,3 +70,9 @@
 .item5{
     font-size: 21px;
 }
+.product{
+    text-decoration: none;
+}
+.product:active{
+    background-color: rgba(249, 141, 8,0.5);
+}

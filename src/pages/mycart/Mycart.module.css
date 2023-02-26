@@ -1,14 +1,17 @@
+.heading{
+    background-color: aliceblue;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 .maincontainer{
     display:grid;
     grid-template-columns:75vw 21vw;
-    margin:2rem;
 }
 
-/* .boxcontainer{
+.boxcontainer{
     display:grid;
     grid-template-columns:auto auto auto;
-    border:2px solid red;
-} */
+    /* border:2px solid red; */
+}
 
 .addevertise{
 
@@ -18,7 +21,6 @@
     display:grid;
     grid-template-columns:auto auto auto;
     /* border:2px solid red; */
-    margin: 0rem;
 }
 /* .card{
     transition: .5s;
@@ -32,16 +34,23 @@
 } */
 
 .card {
+  transition: .5s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     height: auto;
     margin: auto;
     text-align: center;
     font-family: arial;
-    margin-bottom:5rem ;
   }
 
-
+  /* .card:hover {
+    box-shadow: 0 5px 11 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  } */
   
   .price {
     color: grey;
@@ -64,43 +73,31 @@
     font-size: 18px;
   }
   
-  .card button:hover {
+  /* .card button:hover {
     opacity: 0.7;
-  }
+  } */
   .buybutton{
     display:flex;
   }
   .addevertise{
    
        
-  background-image: linear-gradient(to bottom left, rgb(50, 5, 230), rgb(244, 244, 238));
+  background-color:antiquewhite;
   }
-  .offerimage{
+  /* .offerimage{
     margin:11px 11px;
     width:91%;
     height:25%;
     box-shadow: 5px 5px -5px 2px rgb(128, 128, 123);
-  }
-  .offerimage:hover{
-    width:95%;
-    height:25%;
-    box-shadow: 0 21px 21px 0 rgba(0, 0, 0, 0.2);
-  }
+  } */
 
-  .card:hover {
-    /* box-shadow: 5px 5px 11 5px rgba(9, 9, 9, 0.8);
-    max-width: 300px;
-    height: 71vh;
-    width: 21vw;
-    margin: auto;
-    text-align: center;
-    font-family: arial; */
+  .billcard{
 
-    box-shadow: 0 21px 21px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    width: 91%;
+    margin: 5px;
     height: auto;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-    margin-bottom:5rem ;
+    background-color: aliceblue;
+    box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.5);
+    padding:5px;
   }
+ 

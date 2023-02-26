@@ -11,11 +11,12 @@ export default function Home(){
         <>
         <div className={style.main1}>
         {/* <div className={style.main2}> */}
-        <Nav/>
-        < Productnav/>
+        <div  className={style.main2}><Nav/></div>
+        <div id="go">< Productnav/></div>
         <Homebody/>
         <Myproductcard/>
         <Footer/>
+        <button className={style.backtop}><a className={style.backtop} href="#go" >back to top</a></button>
         {/* </div> */}
         
         </div>

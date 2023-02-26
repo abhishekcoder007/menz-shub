@@ -1,6 +1,6 @@
 import React from "react";
 import nav from "./Productnav.module.css";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 
 // import {Navdata} from './../../recoil/navdata/Navdata';
@@ -21,9 +21,9 @@ export default function Productnav(){
                <div className={nav.item1}>MenzHub</div>
                </div>
                <div className={nav.middle}>
-               <div className={nav.item3}><button><Link to="/trousers">Trouser</Link></button></div>
-               <div className={nav.item3}><button><Link to="/shoes">Shoes</Link></button></div>
-               <div className={nav.item3}><button><Link to="/shirts">Shirts</Link></button></div>
+               <div className={nav.item3}><button><NavLink className={nav.product} to="/trousers">Trouser</NavLink></button></div>
+               <div className={nav.item3}><button><NavLink className={nav.product} to="/shoes">Shoes</NavLink></button></div>
+               <div className={nav.item3}><button><NavLink className={nav.product} to="/shirts">Shirts</NavLink></button></div>
                </div>
                <div className={nav.right}>
                {/* <div className={nav.item4}>SignUp</div>

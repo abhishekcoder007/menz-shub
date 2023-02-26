@@ -43,7 +43,8 @@ responsive={responsive}>
       <h1>{ele.productname}</h1>
       <p className={style.price}>{ele.price}</p>
      <p> {ele.about}</p>
-      <p><button>Shop Now</button></p></div>
+      {/* <p><button>Shop Now</button></p> */}
+      </div>
  
    </>
     ))}

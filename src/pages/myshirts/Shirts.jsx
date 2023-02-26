@@ -1,13 +1,34 @@
 import React from 'react';
 import style from "./Shirts.module.css";
 import Nav from '../../component/navbar/Nav';
-import { useRecoilValue } from 'recoil';
+import { useRecoilValue,useRecoilState } from 'recoil';
 import { MShirts } from '../../recoil/cloth/Cloth'; 
+import {Cartdata}   from "../../recoil/cartdata/Cartdata";
+import {useNavigate} from "react-router-dom";
 
 
 
 export default function MYshirts(){
  const data1=useRecoilValue(MShirts)
+ const [b,setb]=useRecoilState(Cartdata)
+const navigate=useNavigate()
+
+function addmeforbuy(i){
+  const myd= data1.filter((ele,index)=>i==index)
+  setb([...b,...myd])
+  navigate('/cart')
+}
+
+ function addmecart(i){
+
+  const myd= data1.filter((ele,index)=>i==index)
+         setb([...b,...myd])
+ }
+
+ function showproductdetail(name,index){
+           navigate(`/items/${name}/${index}`)
+ }
+
     return(
 
         <>
@@ -19,16 +40,16 @@ export default function MYshirts(){
             <div className={style.maincontainer}>
             <div className={style.boxcontainer}>
                    
-                   {data1.map(ele=><>
+                   {data1.map((ele,index)=><>
                     <div className={style.card}>
-
-  <img src={ele.img} />
+                          
+  <img  onClick={()=>showproductdetail(ele.name,index)} src={ele.img} />
   <h1>{ele.name}</h1>
   <p class="price">{ele.cost}</p>
   <p>{ele.description}</p>
   <p className={style.buybutton}>
-    <button>Add to Cart</button> 
-    <button>Buy Now</button>
+    <button onClick={()=>addmecart(index)} >Add to Cart</button> 
+    <button onClick={()=>addmeforbuy(index)}  >Buy Now</button>
     </p>
   </div>
   </>)}

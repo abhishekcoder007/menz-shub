@@ -6,4 +6,19 @@
     display:grid;
     grid-template-rows:auto ;
     gap:21px;
+    margin-top: 61px;
+}
+.main2{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: +1;
+}
+.backtop{
+     text-decoration: none;
+    width: 100vw;
+    background-color: rgb(95, 73, 73);
+    color: bisque;
+    margin-top: 0px;
+   
 }

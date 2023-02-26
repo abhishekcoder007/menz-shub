@@ -2,10 +2,25 @@ import React from 'react';
 import style from "./Myproductcard.module.css";
 import { useRecoilValue } from 'recoil';
 import {Mainproduct} from "../../recoil/mainproduct/Mainproduct";
+import {useNavigate} from "react-router-dom";
+
 
 export default function Myproductcard(){
-
+const navigate=useNavigate()
       const product=useRecoilValue(Mainproduct)
+
+      function gotopage(name){
+
+         if (name=='shirts'){
+            navigate("/shirts")
+         }else if(name=='shoes'){
+            navigate("/shoes")
+         }
+         else if(name=="jeans"){
+            navigate("/trousers")
+         }
+
+      }
 
     return(
         <>
@@ -13,11 +28,11 @@ export default function Myproductcard(){
         <div className={style.container}>
         <div className={style.maincontainer}>
         {/* <div className={style.mycard}> */}
-            {product.map((ele)=>(
+            {product.map((ele,index)=>(
                 <>
         <div className={style.mycard1}>
-            <div><img className={style.myimg} src={ele.img}/></div>
-            <div><button className={style.mybutton}>shop now</button></div>
+            <div><img onClick={()=>gotopage(ele.name)} className={style.myimg} src={ele.img}/></div>
+            <div><button onClick={()=>gotopage(ele.name)} className={style.mybutton}>shop now</button></div>
             
         </div>
         </>

@@ -5,6 +5,7 @@
 .container{
    /* // box-shadow: 2px 2px 2px black; */
     display: grid;
+    width: 100vw;
    
     grid-template-columns: 25vw 41vw 21vw ;
    align-items:center ;
@@ -44,19 +45,41 @@
   
 }
 .item3 button{
-    border-radius: 11px;
+    border-radius: 5px;
     color: black;
     width:6rem;
     height: 2.2rem;
     font-size: x-large;
     font-weight: 400px;
-    background-color: aliceblue;
+    background-color: rgb(79, 150, 197);
 }
 
 .item4{
     font-size: 21px;
     margin-right: 21px;
+    text-decoration: none;
+    color: aliceblue;
 }
 .item5{
     font-size: 21px;
+}
+.mylink{
+    color:white;
+    text-decoration: none;
+    font-size: 21px;
+    text-align: center;
+}
+
+.mylinklogo{
+    font-size: xx-large;
+    font-weight: 800;
+    color: rgb(243, 243, 240);
+    transform: skewY(-5deg); 
+    
+    font-style: italic;
+    text-decoration: none;
+}
+
+.btnsearch{
+border:2px solid black;
 }

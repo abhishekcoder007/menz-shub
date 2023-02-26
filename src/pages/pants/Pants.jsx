@@ -5,12 +5,35 @@ import { MPants } from '../../recoil/cloth/Cloth';
 
 import {useRecoilValue} from "recoil";
 import Nav from '../../component/navbar/Nav';
+import {useRecoilState } from 'recoil';
+
+import {Cartdata}   from "../../recoil/cartdata/Cartdata";
+import {useNavigate} from "react-router-dom";
 
 export default function Pants(){
+    const navigate=useNavigate()
+    const[b,setb]=useRecoilState(Cartdata)
     const data1=useRecoilValue(MPants)
     const img1="https://img.freepik.com/free-vector/gradient-sale-background_52683-80629.jpg?size=626&ext=jpg"
-// const datapants=useRecoilvalue(MPants)
-// const sh =useRecoilvalue(Shirts)
+   
+    function addmeforbuy(i){
+        const myd= data1.filter((ele,index)=>i==index)
+        setb([...b,...myd])
+        navigate('/cart')
+      }
+
+      function addmecart(i){
+
+        const myd= data1.filter((ele,index)=>i==index)
+               setb([...b,...myd])
+       }
+
+       function showproductdetail(name,index){
+        navigate(`/items/${name}/${index}`)
+}
+
+
+
 console.log(data1)
     return(
         <>
@@ -22,16 +45,16 @@ console.log(data1)
             <div className={style.maincontainer}>
             <div className={style.boxcontainer}>
                    
-                   {data1.map(ele=><>
+                   {data1.map((ele,index)=><>
                     <div className={style.card}>
 
-  <img src={ele.img} />
+  <img onClick={()=>showproductdetail(ele.name,index)} src={ele.img} />
   <h1>{ele.name}</h1>
   <p class="price">{ele.cost}</p>
   <p>{ele.description}</p>
   <p className={style.buybutton}>
-    <button>Add to Cart</button> 
-    <button>Buy Now</button>
+    <button    onClick={()=>addmecart(index)}  >Add to Cart</button> 
+    <button onClick={()=>addmeforbuy(index)}>Buy Now</button>
     </p>
   </div>
   </>)}
