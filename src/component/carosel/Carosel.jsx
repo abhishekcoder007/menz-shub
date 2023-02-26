@@ -36,9 +36,9 @@ const responsive = {
  
 responsive={responsive}>
 
-{data.map((ele)=>(
+{data.map((ele,i)=>(
 <>
-<div className={style.card}>
+<div key={i} className={style.card}>
       <img className={style.imgstyle} src={ele.imgurl} />
       <h1>{ele.productname}</h1>
       <p className={style.price}>{ele.price}</p>

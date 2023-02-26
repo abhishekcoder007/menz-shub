@@ -7,6 +7,6 @@ export const Signdata=atom({
 })
 
 export const Signindata=atom({
-    key:"Signdata",
+    key:"Signmedata",
     default:false
 })
