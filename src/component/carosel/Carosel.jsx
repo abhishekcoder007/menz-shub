@@ -62,11 +62,3 @@ responsive={responsive}>
 }
 
 
-// data.map((ele)=>(
-//     <>
-//     <div className={style.card}>
-//       <img src={ele.imgurl} />
-//       <h1>{ele.productname}</h1>
-//       <p className={style.price}>{ele.price}</p>
-//       <p> {ele.about}</p>
-//       <p><button>Add to Cart</button></p> </>)

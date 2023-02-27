@@ -14,7 +14,7 @@ export default function Pants(){
     const navigate=useNavigate()
     const[b,setb]=useRecoilState(Cartdata)
     const data1=useRecoilValue(MPants)
-    const img1="https://img.freepik.com/free-vector/gradient-sale-background_52683-80629.jpg?size=626&ext=jpg"
+    
    
     function addmeforbuy(i){
         const myd= data1.filter((ele,index)=>i==index)

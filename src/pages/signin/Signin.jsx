@@ -13,7 +13,7 @@ import Nav from "../../component/navbar/Nav";
 export default function Signin() {
   const setlogin=useSetRecoilState(Signinda)
     const datalogin=useSetRecoilState(Signindata)
-    const [nameCapture, setNameCapture] = useState();
+    // const [nameCapture, setNameCapture] = useState();
     //   const [numberCapture, setNumberCapture] = useState();
     const [emailCapture, setEmailCapture] = useState();
     const [passwordCapture, setPasswordCapture] = useState();

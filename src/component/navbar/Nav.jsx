@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import nav from "./Nav.module.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-import {Navdata} from './../../recoil/navdata/Navdata';
+// import {Navdata} from './../../recoil/navdata/Navdata';
 import { useRecoilState, useRecoilValue } from "recoil";
 import { NavLink } from "react-router-dom";
-import {Signinda} from "../../recoil/signdata/Signinda";
+
 import {Signindata} from "../../recoil/toggledata/Signdata";
 import {Cartdata} from "../../recoil/cartdata/Cartdata";
 // import {useState}  from "react";
@@ -13,7 +13,7 @@ import {Cartdata} from "../../recoil/cartdata/Cartdata";
 export default function Nav(){
 const [logout,setlogout]=useState(false)
 const [value,setvalue]=useRecoilState(Cartdata)
-const usernameshow=useRecoilValue(Signinda)
+// const usernameshow=useRecoilValue(Signinda)
 const show=useRecoilValue(Signindata)
 const myname=JSON.parse(localStorage.getItem("username"))
 // const=myname.toUppercase()
