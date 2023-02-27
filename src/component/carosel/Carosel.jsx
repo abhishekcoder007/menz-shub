@@ -3,7 +3,7 @@ import Carousel from 'react-multi-carousel';
 import style from  './Carosel.module.css';
 import 'react-multi-carousel/lib/styles.css';
 import { useRecoilValue } from "recoil";
-import { Caroseldata } from "../../recoil/carddata/carouseldata";
+import { Caroseldata } from "../../recoil/carddata/Carouseldata";
 
 export default function Carosel(){
     const data=useRecoilValue(Caroseldata);
