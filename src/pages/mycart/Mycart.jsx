@@ -5,14 +5,14 @@ import style from "./Mycart.module.css";
 import  {MShirts} from "../../recoil/cloth/Cloth";
 import { useState } from 'react';
 import Nav from '../../component/navbar/Nav';
-import Productnav from '../../component/productnav/productnav';
+import Productnav from '../../component/productnav/Productnav';
 
 
 
 export default function Mycart(){
 
  const [p,setp]=useState(0)
- const mydata=useRecoilValue(Cartdata)
+ 
  const mydata1=useRecoilValue(MShirts)
  const [a,seta]=useRecoilState (Cartdata)
 //  let sum=0;

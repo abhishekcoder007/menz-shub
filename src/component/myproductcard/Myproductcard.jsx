@@ -30,7 +30,7 @@ const navigate=useNavigate()
         {/* <div className={style.mycard}> */}
             {product.map((ele,index)=>(
                 <>
-        <div className={style.mycard1}>
+        <div key={index.toString()} className={style.mycard1}>
             <div><img onClick={()=>gotopage(ele.name)} className={style.myimg} src={ele.img}/></div>
             <div><button onClick={()=>gotopage(ele.name)} className={style.mybutton}>shop now</button></div>
             
