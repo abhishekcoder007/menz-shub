@@ -4,7 +4,7 @@ import Footer from '../component/footer/Footer';
 import Nav from '../component/navbar/Nav';
 import Homebody from  '../component/homebody/Homebody';
 import Myproductcard from '../component/myproductcard/Myproductcard';
-// import Productnav from '../component/productnav/productnav';
+
 import Productnav from '../component/productnav/Productnav';
 
 export default function Home(){

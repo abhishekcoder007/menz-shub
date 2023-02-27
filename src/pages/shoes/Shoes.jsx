@@ -18,15 +18,18 @@ export default function Shoes(){
     const data1=useRecoilValue(Sdata)
 
     function addmeforbuy(i){
+       
         const myd= data1.filter((ele,index)=>i==index)
         setb([...b,...myd])
         navigate('/cart')
+        alert("Product added")
+       
       }
 
       function addmecart(i){
-
+        if(confirm("shoes added!")){
         const myd= data1.filter((ele,index)=>i==index)
-               setb([...b,...myd])
+               setb([...b,...myd])}
        }
 
        function showproductdetail(name,index){

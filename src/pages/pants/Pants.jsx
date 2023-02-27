@@ -23,10 +23,11 @@ export default function Pants(){
       }
 
       function addmecart(i){
-
+        if(confirm("product added!")){
         const myd= data1.filter((ele,index)=>i==index)
                setb([...b,...myd])
-       }
+               alert("Product added")
+       }}
 
        function showproductdetail(name,index){
         navigate(`/items/${name}/${index}`)

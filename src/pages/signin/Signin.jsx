@@ -63,17 +63,22 @@ export default function Signin() {
             const username=ele.name
           localStorage.setItem("username",JSON.stringify(username))
 
-            alert('loged in sucess')
+            alert('loged in sucessfull')
             navigate("/cart")
             // console.log()
-           }}})
+           }else{
+            alert("Register first")}
+          }})
 
       }
 
   return (
     <>
-    <Nav/>
+    {/* <div className={style.containercard}> */}
+    {/* <Nav/> */}
       <div className={style.card}>
+      <Nav/>
+     
         <div className={style.signincard}>
           <h2 className={style.heading}>SignIn-First</h2>
           <form>
@@ -118,6 +123,7 @@ export default function Signin() {
           </span>
         </div>
       </div>
+      {/* </div> */}
     </>
   );
 }

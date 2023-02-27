@@ -7,6 +7,7 @@
     grid-template-rows:auto ;
     gap:21px;
     margin-top: 61px;
+   overflow: hidden;
 }
 .main2{
     position: fixed;

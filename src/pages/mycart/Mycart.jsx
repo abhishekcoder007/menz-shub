@@ -25,6 +25,11 @@ function click(){
     console.log("hello")
 }
 
+function deleteitemcart(i){
+
+    seta(a.filter((ele,index)=>i!==index))
+}
+
 
    useEffect(()=>{
     let sum=0;
@@ -43,6 +48,7 @@ function click(){
 
     return(
 <>
+<div className={style.mycontainer}>
        
         {/* <button onClick={click}>click</button>
         {a.map(ele=>ele.name)} */}
@@ -64,6 +70,7 @@ function click(){
   <p class="price">{ele.cost}</p>
   <p>{ele.description}</p>
   <p className={style.buybutton}>
+  <button onClick={()=>deleteitemcart(index)} >delete</button> 
     {/* <button onClick={()=>addmecart(index)} >Add to Cart</button> 
     <button onClick={()=>addmeforbuy(index)}  >Buy Now</button> */}
     </p>
@@ -98,7 +105,8 @@ function click(){
             </div>
 
         </div>
-      
+        
+        </div>
         </>
     )
 }

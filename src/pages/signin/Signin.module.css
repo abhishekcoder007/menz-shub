@@ -1,7 +1,12 @@
+/* .containercard{
+    overflow: hidden;
+} */
+
 .card{
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
-   
+   /* overflow: hidden; */
     justify-content:center;
     align-items: center;
 }
