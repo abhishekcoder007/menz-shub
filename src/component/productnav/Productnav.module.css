@@ -76,3 +76,20 @@
 .product:active{
     background-color: rgba(249, 141, 8,0.5);
 }
+
+@media only screen and (max-width:700px){
+
+    .container{
+        /* // box-shadow: 2px 2px 2px black; */
+         /* display: grid;
+        
+         grid-template-columns: 25vw 41vw 21vw ;
+        align-items:center ;
+         justify-content: space-between;
+         padding: 5px;
+         margin-left: 21px;
+         color:white;
+         margin-right: 21px; */
+         margin-top: 5rem;
+     }
+}

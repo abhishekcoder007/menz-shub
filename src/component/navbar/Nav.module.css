@@ -83,3 +83,22 @@
 .btnsearch{
 border:2px solid black;
 }
+
+@media only screen and (max-width:700px){
+   
+    .container{
+        /* // box-shadow: 2px 2px 2px black; */
+         display: flex;
+         width: 100vw;
+         flex-direction: column;
+        
+         /* grid-template-rows: 25vw 41vw 21vw ; */
+        align-items:space-between ;
+         /* justify-content: space-between; */
+         padding: 5px;
+         /* margin-left: 11px; */
+         color:white;
+         /* margin-right: 11px; */
+     }
+
+}

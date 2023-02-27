@@ -12,9 +12,9 @@
     color:white;
     display:flex;
     flex-direction: column;
-    /* justify-content: center; */
+    
     align-items: center;
-    /* border:1px solid black; */
+    
     width: 100vw;
     height: 25vh;
     background-color: rgb(43, 43, 38);
@@ -46,11 +46,13 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* .backtop{
-  
-    width: 100vw;
-    background-color: rgb(95, 73, 73);
-    color: bisque;
-    margin-top: 0px;
-   
-} */
+
+@media only screen and (max-width:700px){
+
+    .maincontainer{
+       flex-direction: column;
+        /* justify-content: space-around; */
+        align-items: center;
+    
+    }
+}
