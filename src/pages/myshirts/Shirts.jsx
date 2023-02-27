@@ -23,7 +23,7 @@ function addmeforbuy(i){
   if(confirm("product added!")){
   const myd= data1.filter((ele,index)=>i==index)
          setb([...b,...myd])
-        alert("Product added")
+        
   }
   
  }

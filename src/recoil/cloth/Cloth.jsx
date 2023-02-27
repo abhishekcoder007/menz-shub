@@ -26,8 +26,8 @@ default:[
         name:"Shirts",
         price:899,
         cost:"Rs-899",
-        img:"",
-        description:"",
+        img:"https://images.pexels.com/photos/769733/pexels-photo-769733.jpeg?auto=compress&cs=tinysrgb&w=600",
+        description:" soft and easy to wash",
 
     },
     {  
@@ -61,8 +61,8 @@ default:[
         name:"Shirts",
         price:899,
         cost:"Rs-899",
-        img:"",
-        description:"",
+        img:"https://images.pexels.com/photos/769733/pexels-photo-769733.jpeg?auto=compress&cs=tinysrgb&w=600",
+        description:" easy to wash",
 
     },
     {  
