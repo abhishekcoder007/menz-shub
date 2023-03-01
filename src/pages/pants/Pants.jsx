@@ -38,7 +38,8 @@ export default function Pants(){
 console.log(data1)
     return(
         <>
-         <Nav/>
+         <div  className={style.main2}><Nav/></div>
+         {/* <Nav/> */}
     <h1 className={style.heading}><center>MY-TROUSERS COLLECTION</center></h1>
         {/* <h1>{data1.map(ele=>ele.cost)}</h1> */}
 
@@ -46,19 +47,19 @@ console.log(data1)
             <div className={style.maincontainer}>
             <div className={style.boxcontainer}>
                    
-                   {data1.map((ele,index)=><>
+                   {data1.map((ele,index)=><div key={String(index)}>
                     <div className={style.card}>
 
   <img onClick={()=>showproductdetail(ele.name,index)} src={ele.img} />
   <h1>{ele.name}</h1>
-  <p class="price">{ele.cost}</p>
+  <p>{ele.cost}</p>
   <p>{ele.description}</p>
   <p className={style.buybutton}>
     <button    onClick={()=>addmecart(index)}  >Add to Cart</button> 
     <button onClick={()=>addmeforbuy(index)}>Buy Now</button>
     </p>
   </div>
-  </>)}
+  </div>)}
 
                   
 

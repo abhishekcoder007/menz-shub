@@ -37,8 +37,9 @@ export default function Shoes(){
 }
     return(
         <>
-         <Nav/>
-         {/* {data1.map((ele=>ele.pname))} */}
+         {/* <Nav/> */}
+         <div  className={style.main2}><Nav/></div>
+        
         <h1 className={style.heading}><center>SHOES-COLLECTION</center></h1>
        
 
@@ -46,19 +47,20 @@ export default function Shoes(){
             <div className={style.maincontainer}>
             <div className={style.boxcontainer}>
                    
-                   {data1.map((ele,index)=><>
+                   {data1.map((ele,index)=>
+                   <div key={String(index)}>
                     <div className={style.card}>
 
   <img onClick={()=>showproductdetail(ele.pname,index)} src={ele.img} />
   <h1>{ele.pname}</h1>
-  <p class="price">{ele.cost}</p>
+  <p >{ele.cost}</p>
   <p>{ele.description}</p>
   <p className={style.buybutton}>
     <button  onClick={()=>addmecart(index)} >Add to Cart</button> 
     <button onClick={()=>addmeforbuy(index)}>Buy Now</button>
     </p>
   </div>
-  </>)}
+  </div>)}
 
                   
 

@@ -52,8 +52,10 @@ function deleteitemcart(i){
        
         {/* <button onClick={click}>click</button>
         {a.map(ele=>ele.name)} */}
-        <Nav/>
-        < Productnav/>
+        {/* <Nav/> */}
+        <div  className={style.main2}><Nav/></div>
+        {/* < Productnav/> */}
+        <div  className={style.heading}> < Productnav/></div>
 
         <h1 className={style.heading}><center>CART-ITEMS</center></h1>
        
@@ -67,7 +69,7 @@ function deleteitemcart(i){
 
   <img src={ele.img} />
   <h1>{ele.name}</h1>
-  <p class="price">{ele.cost}</p>
+  <p>{ele.cost}</p>
   <p>{ele.description}</p>
   <p className={style.buybutton}>
   <button onClick={()=>deleteitemcart(index)} >delete</button> 
@@ -89,11 +91,11 @@ function deleteitemcart(i){
                 <h2> Payment</h2>
                        <div className={style.billcard} >
                         <div><i>menz- hub private ltd.</i></div>
-                        {a.map(ele=>(<>
+                        {a.map((ele,index)=>(<div key={index.toString()}>
                         <p>productname:-{ele.name} <span>Cost:-{ele.cost}</span></p>
 
                     
-                        </>))}
+                        </div>))}
                         {/* <button onClick={costme}>cost</button> */}
                         <p>total cost:-{p}</p>
                         <button >DONE</button>

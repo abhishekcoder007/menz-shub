@@ -1,7 +1,10 @@
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     max-width: 300px;
+    height:51vh;
+    border-radius: 25px;
     margin: auto;
+    /* margin-left:11px; */
     text-align: center;
     font-family: arial;
   }
@@ -27,8 +30,16 @@
     opacity: 0.7;
   }
   .imgstyle{
-
+     border-radius: 21px;
     width:19vw;
-    height:51vh;
+    height:25vh;
     
+  }
+  @media only screen and (max-width:700px){
+    .imgstyle{
+
+      width:51vw;
+      height:21vh;
+      
+    }
   }

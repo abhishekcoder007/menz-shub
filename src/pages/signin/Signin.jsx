@@ -11,12 +11,22 @@ import {Signinda} from "../../recoil/signdata/Signinda"
 import Nav from "../../component/navbar/Nav";
 
 export default function Signin() {
+
+  
+  const passwordRegixExpression =/[a-z]/i
+  // /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}$/;
+  const emailRegixExpression =  /^[A-Z0-9]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+  // /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+
+
+
   const setlogin=useSetRecoilState(Signinda)
     const datalogin=useSetRecoilState(Signindata)
     // const [nameCapture, setNameCapture] = useState();
     //   const [numberCapture, setNumberCapture] = useState();
-    const [emailCapture, setEmailCapture] = useState();
-    const [passwordCapture, setPasswordCapture] = useState();
+    const [emailCapture, setEmailCapture] = useState("");
+    const [passwordCapture, setPasswordCapture] = useState("");
    
     const [emailAlert, setEmailAlert] = useState(false);
     const [passwordAlert, setPasswordAlert] = useState(false);
@@ -25,7 +35,7 @@ export default function Signin() {
     function emailValidation(e) {
         setEmailCapture(() => e.target.value);
         console.log(emailCapture);
-        const emailRegixExpression = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
         if (!emailRegixExpression.test(emailCapture)) {
           setEmailAlert(true);
         } else {
@@ -35,8 +45,7 @@ export default function Signin() {
     
       function passwordValidation(e) {
         setPasswordCapture(e.target.value);
-        const passwordRegixExpression =
-          /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}$/;
+       
           
         if (!passwordRegixExpression.test(passwordCapture)) {
           setPasswordAlert(true);
@@ -47,41 +56,63 @@ export default function Signin() {
 
       function logedin(e){
         e.preventDefault()
-        const login={
-          email:emailCapture,
-          password:passwordCapture,
-        }
-        setlogin((old)=>[...old,login])
-        const passwordRegixExpression =
-          /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,20}$/;
-          const emailRegixExpression = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-        // const data=JSON.parse(localStorage.getItem("list"))
-        data.filter((ele)=>{
-            if (passwordRegixExpression.test(passwordCapture) && emailRegixExpression.test(emailCapture)) {
-           if(ele.email==emailCapture && ele.password==passwordCapture){
-            datalogin(true)
-            const username=ele.name
-          localStorage.setItem("username",JSON.stringify(username))
 
-            alert('loged in sucessfull')
-            navigate("/cart")
-            // console.log()
-           }else{
-            alert("Register first")}
-          }})
+        // const login={
+        //   email:emailCapture,
+        //   password:passwordCapture,
+        // }
+        // setlogin((old)=>[...old,login])
+      
+        
+        
+        // data.forEach((ele)=>{
+            if (passwordRegixExpression.test(passwordCapture) && emailRegixExpression.test(emailCapture)) {
+              for(let i=0;i<data.length;i++){ 
+                if(data[i].email==emailCapture && data[i].password==passwordCapture){
+               
+              datalogin(true)
+
+              alert('login in sucessfull')
+                 const username=data[i].name
+                  localStorage.setItem("username",JSON.stringify(username))
+                 
+
+                  const login={
+                    email:emailCapture,
+                    password:passwordCapture,
+                  }
+                  setlogin((old)=>[...old,login])
+            
+           return navigate("/cart") 
+            
+             
+           } 
+
+           else{
+           return( alert("Signup--first"))
+            
+
+      }}
+          
+          
+          }
+          // })
 
       }
+
+    
 
   return (
     <>
     {/* <div className={style.containercard}> */}
     {/* <Nav/> */}
       <div className={style.card}>
-      <Nav/>
+      {/* <Nav/> */}
+      <div  className={style.main2}><Nav/></div>
      
         <div className={style.signincard}>
           <h2 className={style.heading}>SignIn-First</h2>
-          <form>
+          <form >
             <div className={style.inputbox}>
             <EmailIcon sx={{ fontSize: 59, color: "blue" }} />{" "}
               <input
@@ -108,7 +139,7 @@ export default function Signin() {
               />
               <p>{passwordAlert ? "enter valid password" : ""}</p>
             </div>
-            <button onClick={logedin} className={style.submitbtn}>submit</button>
+            <button onClick={(e)=>{logedin(e)}}  className={style.submitbtn}>submit</button>
           </form>
           <i>if you are not a user </i>
           <span className={style.btn}>

@@ -51,8 +51,18 @@
 
     .maincontainer{
        flex-direction: column;
-        /* justify-content: space-around; */
+       
         align-items: center;
     
     }
+    .mens{
+        font-size: small;
+        text-align: center;
+        margin-right: 11px;
+        padding-right:2px;
+        font-weight: 400;
+        color: white;
+        overflow: hidden;
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       }
 }

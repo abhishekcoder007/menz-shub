@@ -24,19 +24,19 @@ const navigate=useNavigate()
 
     return(
         <>
-        {/* <h1>card</h1> */}
+        
         <div className={style.container}>
         <div className={style.maincontainer}>
-        {/* <div className={style.mycard}> */}
+     
             {product.map((ele,index)=>(
-                <>
-        <div key={index.toString()} className={style.mycard1}>
+                <div key={index.toString()} >
+        <div className={style.mycard1}>
             <div><img onClick={()=>gotopage(ele.name)} className={style.myimg} src={ele.img}/></div>
             <div><button onClick={()=>gotopage(ele.name)} className={style.mybutton}>shop now</button></div>
             
         </div>
-        </>
-        ))}
+        </div>
+        ))} 
         </div>
         {/* </div> */}
         <div className={style.addver}>

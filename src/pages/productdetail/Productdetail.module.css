@@ -1,0 +1,27 @@
+ 
+.buybutton{
+    display:flex;
+    justify-content: center;
+   
+  }
+  .main2{
+    position: fixed;
+    /* width:fit-cont; */
+    left: 0px;
+    top: 0px;
+    z-index: +1;
+    /* margin-left: 51px; */
+}
+.detailcontent{
+   /* margin-left: 2rem; */
+  text-align: center;
+  margin-top: 11rem;
+}
+.myimg{
+  width:100vh
+}
+@media only screen and(max-width:700px){
+  .myimg{
+    width:fit-content;
+  }
+}

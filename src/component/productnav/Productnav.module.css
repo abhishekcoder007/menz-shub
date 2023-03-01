@@ -92,4 +92,8 @@
          margin-right: 21px; */
          margin-top: 5rem;
      }
+     .left{
+        /* border: 2px solid red; */
+         display:none;
+    }
 }

@@ -19,7 +19,7 @@ export default function Signup() {
   //   const [numberError, setnumberError] = useState(false);
   const navigate=useNavigate()
   const localData= JSON.parse(localStorage.getItem("myList")) || [ ]
-
+          console.log("localdata"+localData)
   function nameValidation(e) {
     setNameCapture(e.target.value);
     const nameRegixExpression = /^[a-zA-Z0-9]+([_\s/\-]?[a-zA-Z0-9])*$/;
@@ -73,12 +73,12 @@ export default function Signup() {
       passwordRegixExpression.test(passwordCapture) &&
       nameRegixExpression.test(nameCapture)
     ) {
-      const mydata = {
+      let mydata = {
         name: nameCapture,
         email: emailCapture,
         password: passwordCapture,
       };
-      localData.push(mydata)
+       const data=localData.push(mydata)
       localStorage.setItem("myList", JSON.stringify(localData));
       console.log(mydata);
       navigate("/login")
@@ -87,10 +87,10 @@ export default function Signup() {
 
   return (
     <>
-    <Nav/>
+       <div  className={style.main2}><Nav/></div>
       <div className={style.card}>
         <div className={style.signincard}>
-          <h2 className={style.heading}>"SignIn-First"</h2>
+          <h2 className={style.heading}>"SignUp -First"</h2>
           <form>
             <div className={style.inputbox}>
               <AccountBoxIcon sx={{ fontSize: 61, color: "blue" }} />{" "}

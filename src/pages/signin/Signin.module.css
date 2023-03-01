@@ -10,6 +10,12 @@
     justify-content:center;
     align-items: center;
 }
+.main2{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: +1;
+}
 
 .signincard{
      box-shadow: 0 11px 21px 0 rgba(239, 12, 12, 0.5);
@@ -76,4 +82,18 @@
 }
 .signuplink{
     text-decoration: none;
+}
+@media only screen and(max-width:700px){
+    .signincard{
+        box-shadow: 0 11px 21px 0 rgba(239, 12, 12, 0.5);
+       display: flex;
+       width:51vw;
+       flex-direction: column;
+       margin-top:25vh;
+       justify-content:center;
+       align-items: center;
+       padding: 51px;
+     
+   
+   }
 }

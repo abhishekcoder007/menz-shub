@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import nav from "./Nav.module.css";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 // import {Navdata} from './../../recoil/navdata/Navdata';
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -50,7 +51,7 @@ function logoutus(){
                <div className={nav.right}>
                <div className={nav.item4}>
               {/* {logout? <span > logout</span> : ""} */}
-              {(show?<div onClick={logoutme}>{`${Welcome} ${myname}`}</div>:" ")}
+              {(show?<div onClick={logoutme}> <AccountCircleIcon/>{`${Welcome} ${myname}`}</div>:" ")}
               {logout? <button onClick={logoutus} > logout</button> : " "}
                <NavLink className={nav.item4} to= "/login">
                { show?"":"SignIn"}

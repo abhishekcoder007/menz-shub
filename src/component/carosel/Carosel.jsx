@@ -32,13 +32,13 @@ const responsive = {
 
 <Carousel   
  infinite={true}
- showDots={true}
+//  showDots={true}
  
 responsive={responsive}>
 
 {data.map((ele,i)=>(
-<>
-<div key={i} className={style.card}>
+<div key={i}>
+<div  className={style.card}>
       <img className={style.imgstyle} src={ele.imgurl} />
       <h1>{ele.productname}</h1>
       <p className={style.price}>{ele.price}</p>
@@ -46,7 +46,7 @@ responsive={responsive}>
       {/* <p><button>Shop Now</button></p> */}
       </div>
  
-   </>
+   </div>
     ))}
 
 

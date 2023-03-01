@@ -7,6 +7,17 @@
     grid-template-columns:75vw 21vw;
     overflow: scroll;
 }
+.heading{
+  text-align: center;
+  margin-top: 11rem;
+}
+.main2{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: +1;
+  /* margin-bottom: 21rem; */
+}
 
 
 
@@ -42,11 +53,11 @@
 
   .card:hover {
     box-shadow: 0 5px 11 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    /* max-width: 300px;
     height: auto;
     margin: auto;
     text-align: center;
-    font-family: arial;
+    font-family: arial; */
   }
   
   .price {
@@ -100,4 +111,37 @@
     margin: auto;
     text-align: center;
     font-family: arial;
+  }
+
+  @media only screen and (max-width:700px){
+
+    .boxcontainer{
+      display:block;
+      /* display:grid;
+      grid-template-rows:auto ; */
+      /* border:2px solid red; */
+  }
+  .maincontainer{
+    display:grid;
+    grid-template-rows:auto;
+    overflow: scroll;
+}
+.addevertise{
+   display:none;
+       
+  background-image: linear-gradient(to bottom left, rgb(50, 5, 230), rgb(244, 244, 238));
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 91vw;
+    height: auto;
+    margin: 2rem;
+
+    text-align: center;
+    font-family: arial;
+  }
+  .card img{
+    width:51vw;
+    height:41vh;
+  }
   }
