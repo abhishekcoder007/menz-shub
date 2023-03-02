@@ -1,0 +1,113 @@
+
+/* .containercard{
+    overflow: hidden;
+} */
+
+.card{
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+   /* overflow: hidden; */
+    justify-content:center;
+    align-items: center;
+}
+.main2{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: +1;
+}
+
+.signincard{
+     box-shadow: 0 11px 21px 0 rgba(57, 52, 52, 0.5);
+    display: flex;
+    width:fit-content;
+    flex-direction: column;
+    margin-top:25vh;
+    justify-content:center;
+    align-items: center;
+    padding: 51px;
+    /* border: 2px solid rgb(238, 215, 6); */
+
+}
+.heading{
+
+    font-size: xx-large;
+    /* background-color:rgba(245, 245, 244, 0.1); */
+    box-shadow: 0 11px 11px 0 rgba(200, 216, 53, 0.5);
+    /* border: 2px solid black; */
+    font-weight: 500;
+    color: rgb(14, 15, 16);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.inputbox{
+
+    display:flex;
+    flex-direction: column;
+    margin-bottom:15px;
+    align-items: center;
+    font-size: medium;
+    font-weight: 400;
+
+}
+.signincard .inputbox input{
+
+    width: 25vw;
+    height: 05vh;
+    border-radius: 1px;
+    outline-color:rgba(246, 238, 85, 0.5) ;
+    outline-style: inset;
+    outline-width: 2px;
+
+}
+.btn{
+    margin-left: 11rem;
+}
+
+.submitbtn{
+      font-size: x-large;
+     background-color: aliceblue;
+     color:black;
+    margin-left: 3.5rem;
+    border-radius: 5px;
+    width:81%;
+    height:2rem;
+}
+.submitbtn1{
+    background-color: aliceblue;
+    color:black;
+   margin-left: 23rem;
+   border-radius: 5px;
+   width:5rem;
+   height:2rem;
+}
+.billcard{
+
+    width: 91%;
+    margin: 5px;
+    height: auto;
+    background-color: aliceblue;
+    box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.5);
+    padding:5px;
+  }
+.signuplink{
+    text-decoration: none;
+}
+.payment{
+    color:brown;
+}
+@media only screen and(max-width:700px){
+    .signincard{
+        box-shadow: 0 11px 21px 0 rgba(239, 12, 12, 0.5);
+       display: flex;
+       width:51vw;
+       flex-direction: column;
+       margin-top:25vh;
+       justify-content:center;
+       align-items: center;
+       padding: 51px;
+     
+   
+   }
+}

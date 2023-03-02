@@ -72,7 +72,7 @@ export default function Signin() {
                
               datalogin(true)
 
-              alert('login in sucessfull')
+              alert('login sucessfull')
                  const username=data[i].name
                   localStorage.setItem("username",JSON.stringify(username))
                  
@@ -83,7 +83,7 @@ export default function Signin() {
                   }
                   setlogin((old)=>[...old,login])
             
-           return navigate("/cart") 
+           return navigate("/") 
             
              
            } 

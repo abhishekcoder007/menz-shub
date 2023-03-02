@@ -39,7 +39,7 @@ setadd([...add,ele])
   
   return (
     <div>
-      {/* <Nav/> */}
+     
       <div  className={style.main2}><Nav/></div>
      <div className={style.detailcontent}> <h1>Product--detail{parseInt(value)}</h1>
       {data1.filter((ele,index)=> index===value && ele.name==nameproduct).map(ele=>(

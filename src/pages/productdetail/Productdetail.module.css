@@ -6,11 +6,11 @@
   }
   .main2{
     position: fixed;
-    /* width:fit-cont; */
+    width:100%;
     left: 0px;
     top: 0px;
     z-index: +1;
-    /* margin-left: 51px; */
+    
 }
 .detailcontent{
    /* margin-left: 2rem; */
@@ -18,10 +18,11 @@
   margin-top: 11rem;
 }
 .myimg{
-  width:100vh
+  width:51vw;
+  height: 100vh;
 }
 @media only screen and(max-width:700px){
   .myimg{
-    width:fit-content;
+    width:21vw;
   }
 }

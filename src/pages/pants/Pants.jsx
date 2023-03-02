@@ -47,7 +47,7 @@ console.log(data1)
             <div className={style.maincontainer}>
             <div className={style.boxcontainer}>
                    
-                   {data1.map((ele,index)=><div key={String(index)}>
+                   {data1.map((ele,index)=>(<div key={String(index)}>
                     <div className={style.card}>
 
   <img onClick={()=>showproductdetail(ele.name,index)} src={ele.img} />
@@ -59,7 +59,7 @@ console.log(data1)
     <button onClick={()=>addmeforbuy(index)}>Buy Now</button>
     </p>
   </div>
-  </div>)}
+  </div>))}
 
                   
 

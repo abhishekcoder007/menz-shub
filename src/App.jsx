@@ -16,6 +16,7 @@ import Myproduct from "./pages/myproduct/Myproduct";
 import {Signindata} from "./recoil/toggledata/Signdata"
 import { useRecoilValue } from "recoil";
 import Productdetail from "./pages/productdetail/Productdetail";
+import Payment from "./pages/payment/Payment";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/myproduct" element={<Myproduct/>}/>
       <Route path="/items/:name/:id" element={<Productdetail/>}/>
+      <Route path="/payment" element={<Payment/>}/>
      
      </Routes>
     </div>

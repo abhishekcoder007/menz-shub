@@ -1,11 +1,13 @@
-.heading{
-    background-color: aliceblue;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-.maincontainer{
+
+
+
+
+
+
+  .maincontainer{
     display:grid;
     grid-template-columns:75vw 21vw;
-    overflow: scroll;
+    margin:2rem;
 }
 .heading{
   text-align: center;
@@ -18,8 +20,11 @@
   z-index: +1;
   /* margin-bottom: 21rem; */
 }
-
-
+/* .boxcontainer{
+    display:grid;
+    grid-template-columns:auto auto auto;
+    border:2px solid red;
+} */
 
 .addevertise{
 
@@ -29,6 +34,7 @@
     display:grid;
     grid-template-columns:auto auto auto;
     /* border:2px solid red; */
+    margin: 0rem;
 }
 /* .card{
     transition: .5s;
@@ -41,24 +47,19 @@
     height: 311px;
 } */
 
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     height: auto;
-    margin: 2rem;
-
-    text-align: center;
-    font-family: arial;
-  }
-
-  .card:hover {
-    box-shadow: 0 5px 11 0 rgba(0, 0, 0, 0.2);
-    /* max-width: 300px;
-    height: auto;
     margin: auto;
     text-align: center;
-    font-family: arial; */
+    font-family: arial;
+    margin-bottom:5rem ;
+    
   }
+
+
   
   .price {
     color: grey;
@@ -101,16 +102,25 @@
   .offerimage:hover{
     width:95%;
     height:25%;
-    box-shadow: 5px 5px 2px -1px rgb(219, 126, 13);
+    box-shadow: 0 21px 21px 0 rgba(0, 0, 0, 0.2);
   }
+
   .card:hover {
-    box-shadow: 5px 5px 11 5px rgba(9, 9, 9, 0.8);
+    /* box-shadow: 5px 5px 11 5px rgba(9, 9, 9, 0.8);
     max-width: 300px;
     height: 71vh;
     width: 21vw;
     margin: auto;
     text-align: center;
+    font-family: arial; */
+
+    box-shadow: 0 21px 21px 0 rgba(0, 0, 0, 0.2);
+    /* max-width: 300px;
+    height: auto;
+    margin: auto;
+    text-align: center;
     font-family: arial;
+    margin-bottom:5rem ; */
   }
 
   @media only screen and (max-width:700px){
@@ -124,7 +134,8 @@
   .maincontainer{
     display:grid;
     grid-template-rows:auto;
-    overflow: scroll;
+   
+    overflow: hidden;
 }
 .addevertise{
    display:none;
@@ -135,7 +146,8 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 91vw;
     height: auto;
-    margin: 2rem;
+    margin-top: 2rem;
+   
 
     text-align: center;
     font-family: arial;
