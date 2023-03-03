@@ -88,14 +88,20 @@ export default function Signin() {
              
            } 
 
-           else{
-           return( alert("Signup--first"))
+      //      else{
+      //      alert("Signup--first")
             
 
-      }}
+      // }
+    } return alert("Signup--first")
           
           
           }
+          else{
+            alert("Signup-helofirst")
+             
+    
+       }
           // })
 
       }
