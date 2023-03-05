@@ -63,7 +63,7 @@ function searchproduct(){
             setme(true)
             // navigate("/")
           console.log(searchme)
-    const data=datavalue.filter(ele=>ele.name?.toLowerCase().includes(searchme))
+    const data=datavalue.filter(ele=>ele.name?.toLowerCase().includes(searchme?.toLowerCase()))
           
     setstore(data)
     navigate("/")
