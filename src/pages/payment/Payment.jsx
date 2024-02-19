@@ -52,7 +52,7 @@ export default function Payment() {
             {/* <div className={style.billcard} > */}
             <p className={style.payment}>payment option will available soon</p>
                         <div><i>menz- hub private ltd.</i></div>
-                        {data.map((ele,index)=>(<div key={index.toString()}>
+                        {data?.map((ele,index)=>(<div key={index.toString()}>
                         <p>productname:-{ele.name} <span>Cost:-{ele.cost}</span></p>
 
                     
